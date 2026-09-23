@@ -8,10 +8,11 @@ func _ready() -> void:
 	loaded.emit()
 	
 func _on_restart_pressed() -> void:
+	Globals.reset()
 	TransitionController.transition_to(start_scene)
 
 func _on_quit_pressed() -> void:
-	TransitionController.transition_in()
+	TransitionController.transition_in_black()
 	await TransitionController.transitioned_in
 	await get_tree().create_timer(0.3).timeout
 	get_tree().quit()

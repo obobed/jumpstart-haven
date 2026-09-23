@@ -5,14 +5,12 @@ var player_pos = Vector2(0,0)
 
 const quota := 3
 
-signal collected_all
-
 var collected := 0
 
 func add_coin():
 	collected += 1
 	if collected >= quota:
-		collected_all.emit()
+		TransitionController.transition_to("res://scenes/win.tscn")
 
 func set_player_pos(position: Vector2):
 	player_pos = position
@@ -20,3 +18,7 @@ func set_player_pos(position: Vector2):
 func getSpawn():
 	print(respawn)
 	return respawn
+	
+func reset():
+	collected = 0
+	Health.health = 3

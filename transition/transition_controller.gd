@@ -13,10 +13,14 @@ func _ready() -> void:
 func transition_in():
 	animation_player.play("in")
 	overlay.visible = true
-	
+
+func transition_in_black():
+	animation_player.play("in_black")
+	overlay.visible = true
+
 func transition_out():
 	animation_player.play("out")
-	
+
 func transition_to(scene: String):
 	transition_in()
 	await transitioned_in
@@ -35,7 +39,7 @@ func transition_to(scene: String):
 	await transitioned_out
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "in":
+	if anim_name == "in" or anim_name == "in_black":
 		transitioned_in.emit()
 	elif anim_name == "out":
 		overlay.visible = false # otherwise the invisible overlay keeps eating mouse clicks

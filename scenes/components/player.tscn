@@ -131,6 +131,7 @@ script = ExtResource("1_g2els")
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="camera" type="Camera2D" parent="." unique_id=1642076844]
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1041296177]

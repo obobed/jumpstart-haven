@@ -1,7 +1,5 @@
 extends Node
 
-signal hide_bars
-
 @export_file("*.tscn") var end_screen = "res://scenes/gameOver.tscn"
 
 var health = 3: # the starting amount of health
@@ -12,5 +10,4 @@ var health = 3: # the starting amount of health
 func check_health():
 	if health < 1:
 		health = 3
-		hide_bars.emit()
 		TransitionController.transition_to(end_screen)

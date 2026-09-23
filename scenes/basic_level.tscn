@@ -194,3 +194,9 @@ shape = SubResource("WorldBoundaryShape2D_amx8r")
 [node name="CoinBar" parent="." unique_id=1453312469 instance=ExtResource("4_qb4si")]
 
 [node name="HealthBar" parent="." unique_id=1939863848 instance=ExtResource("6_odilc")]
+
+[node name="Coin2" parent="." unique_id=1397925429 instance=ExtResource("3_tn7vo")]
+position = Vector2(-421, -78)
+
+[node name="Coin3" parent="." unique_id=224405351 instance=ExtResource("3_tn7vo")]
+position = Vector2(865, 38)

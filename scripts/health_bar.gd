@@ -11,7 +11,6 @@ const filled_slot = preload("res://assets/heart.png")
 const empty_slot = preload("res://assets/emptyHeart.png")
 
 func _ready() -> void:
-	Health.connect("hide_bars", func(): self.visible = false)
 	self.visible = true
 	updateHealth()
 
