@@ -11,7 +11,7 @@ func _on_restart_pressed() -> void:
 	TransitionController.transition_to(start_scene)
 
 func _on_quit_pressed() -> void:
-	TransitionController.transition_out()
-	await TransitionController.transitioned_out
+	TransitionController.transition_in()
+	await TransitionController.transitioned_in
 	await get_tree().create_timer(0.3).timeout
 	get_tree().quit()

@@ -38,4 +38,5 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "in":
 		transitioned_in.emit()
 	elif anim_name == "out":
+		overlay.visible = false # otherwise the invisible overlay keeps eating mouse clicks
 		transitioned_out.emit()

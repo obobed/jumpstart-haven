@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://do2l6hhl7vitl"]
+
+[ext_resource type="Script" uid="uid://dp2eqsel5weu" path="res://scripts/game_over.gd" id="1_os72h"]
+[ext_resource type="Texture2D" uid="uid://dvdgx0tdpposj" path="res://assets/gameOver.png" id="2_ud4ay"]
+
+[sub_resource type="Theme" id="Theme_bi355"]
+
+[node name="GameOver" type="Control" unique_id=1340480529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_os72h")
+start_scene = "uid://jv2aduglbjjg"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=744534905]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.729412, 0.776471, 0.839216, 1)
+
+[node name="restart" type="Button" parent="." unique_id=172489391]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_right = 400.0
+offset_bottom = 1.0
+grow_vertical = 0
+theme = SubResource("Theme_bi355")
+theme_override_font_sizes/font_size = 100
+text = "Restart"
+
+[node name="quit" type="Button" parent="." unique_id=54461629]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -145.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_bi355")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1425470449]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=274695906]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_top = 50.0
+offset_right = 450.0
+offset_bottom = 275.0
+grow_horizontal = 2
+texture = ExtResource("2_ud4ay")
+stretch_mode = 3
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
