@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dl6ayn4mnulq3"]
+
+[ext_resource type="Script" uid="uid://bnp0poo3xp0b5" path="res://scripts/coin_bar.gd" id="1_tmhbf"]
+
+[node name="CoinBar" type="CanvasLayer" unique_id=1453312469]
+script = ExtResource("1_tmhbf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=815390581]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoinSlot1" type="TextureRect" parent="HBoxContainer" unique_id=1238922880]
+layout_mode = 2
+
+[node name="CoinSlot2" type="TextureRect" parent="HBoxContainer" unique_id=645241826]
+layout_mode = 2
+
+[node name="CoinSlot3" type="TextureRect" parent="HBoxContainer" unique_id=321666462]
+layout_mode = 2
