@@ -16,7 +16,6 @@ func set_player_pos(position: Vector2):
 	player_pos = position
 
 func getSpawn():
-	print(respawn)
 	return respawn
 	
 func reset():
