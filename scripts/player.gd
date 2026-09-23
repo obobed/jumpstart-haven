@@ -37,6 +37,11 @@ func _physics_process(delta: float) -> void:
 	
 	var direction = Input.get_axis("move_left", "move_right") # set direction for dash
 	
+	if direction < 0:
+		$sprite.flip_h = true
+	elif direction > 0:
+		$sprite.flip_h = false
+	
 	Globals.set_player_pos(self.position)
 	
 	if is_on_floor():

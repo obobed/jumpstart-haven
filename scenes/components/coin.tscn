@@ -130,10 +130,18 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amx8r"]
+
 [node name="Coin" type="Area2D" unique_id=1100849642]
+scale = Vector2(6, 6)
 script = ExtResource("1_7o2cm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=652049112]
 sprite_frames = SubResource("SpriteFrames_amx8r")
-frame = 9
-frame_progress = 0.52743393
+frame = 1
+frame_progress = 0.5990766
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=250395567]
+shape = SubResource("RectangleShape2D_amx8r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

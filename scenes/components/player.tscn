@@ -127,13 +127,22 @@ animations = [{
 scale = Vector2(16, 16)
 script = ExtResource("1_g2els")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=354919738]
+[node name="collision" type="CollisionShape2D" parent="." unique_id=354919738]
 shape = SubResource("CapsuleShape2D_g2els")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1642076844]
+[node name="camera" type="Camera2D" parent="." unique_id=1642076844]
 position_smoothing_enabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1041296177]
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1041296177]
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="dashTimer" type="Timer" parent="." unique_id=1205808581]
+wait_time = 0.1
+
+[node name="dashCooldown" type="Timer" parent="." unique_id=1497456872]
+wait_time = 0.15
+
+[connection signal="timeout" from="dashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dashCooldown" to="." method="_on_dash_cooldown_timeout"]
