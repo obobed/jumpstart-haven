@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -800.0
-var gravity = 1600
+const JUMP_VELOCITY = -900.0
+var gravity = 1400
 var slammed = false
 
 var can_input = true
