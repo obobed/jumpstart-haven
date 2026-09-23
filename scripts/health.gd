@@ -1,3 +1,5 @@
+extends Node
+
 signal hide_bars
 
 @export_file("*.tscn") var end_screen = "res://scenes/components/gameOver.tscn"

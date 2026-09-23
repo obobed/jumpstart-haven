@@ -8,6 +8,8 @@ script = ExtResource("1_tmhbf")
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=815390581]
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture_filter = 1
 
 [node name="CoinSlot1" type="TextureRect" parent="HBoxContainer" unique_id=1238922880]
 layout_mode = 2

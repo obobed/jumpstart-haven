@@ -24,6 +24,11 @@ config/icon="res://icon.svg"
 Globals="*uid://83hydm8jx8tn"
 Health="*uid://bcpvdcdov1tn5"
 
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=720
+
 [input]
 
 move_left={
